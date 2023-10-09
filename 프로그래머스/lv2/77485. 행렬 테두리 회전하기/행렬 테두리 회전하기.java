@@ -3,18 +3,14 @@ class Solution {
     public int[] solution(int rows, int columns, int[][] queries) {
         int[] answer = new int[queries.length];
         int[][] map = new int[rows][columns];
-        Set<Integer>set = new HashSet<>();
-        
-        
-        
         int first = 1; 
+        
         for(int i = 0; i<rows ; i++){
             for(int j = 0; j<columns; j++){
                 map[i][j] = first;
                 first++;
             }
         }
-        //System.out.println(Arrays.deepToString(map));
         
         for(int i = 0; i<queries.length; i++){
             List<Integer> list = new ArrayList<>();
@@ -76,13 +72,10 @@ class Solution {
                     min = list.get(index);
                 }index++;
             }
-            //System.out.println(list.toString());
-            //System.out.println(min);
             answer[i] = min;
 
             }
-        
-       //System.out.println(Arrays.deepToString(map));
+
         
         return answer;
     }
