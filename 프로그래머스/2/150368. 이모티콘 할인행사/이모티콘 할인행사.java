@@ -41,15 +41,7 @@ class Solution {
             }
             
         }
-        
-        /*
-        List<Integer> keySet = new ArrayList<>(map.keySet());
-        Collections.reverse(keySet);
-        
-        answer[0] = keySet.get(0);
-        answer[1] = map.get(keySet.get(0));
-        */
-        
+
         answer[0] = Integer.MIN_VALUE;
         answer[1] = Integer.MIN_VALUE;
         
@@ -65,7 +57,6 @@ class Solution {
               }
           }
         }
-
         return answer;
     }
     
@@ -81,7 +72,6 @@ class Solution {
 			dupPerCount++;
 			return;
 		}
-		
 		for(int i = 0; i < n; i++) {
 			list.add(arr[i]);
 			dupPermutation(list, count - 1); // 뽑을 때 마다 count - 1
